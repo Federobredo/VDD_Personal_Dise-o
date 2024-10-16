@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+}
+
+.centered-title {
+  text-align: center;
+  font-weight: bold; /* Para que el texto esté en negrita */
+  margin: 0; /* Para quitar márgenes por defecto */
+  font-size: 40px;
+}
+
+.centered-title-2 {
+  text-align: center;
+  font-weight: bold; /* Para que el texto esté en negrita */
+  margin: 0; /* Para quitar márgenes por defecto */
+  font-size: 30px;
+}
+
+/* Estilos para la imagen del encabezado */
+.header-image-container {
+  text-align: center; /* Centra la imagen dentro del contenedor */
+  margin-bottom: 40px; /* Espacio debajo de la imagen */
+}
+
+/* Ajusta el tamaño de la imagen del encabezado */
+.header-image {
+  width: 300px; /* Cambia a la medida deseada */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+.gallery-container {
+  padding: 20px; /* Espacio interno */
+  max-width: 1400px; /* Ancho máximo del contenedor */
+  width: 90%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  text-align: center;
+  color: #000000;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.hover-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.hover-info {
+  position: absolute; /* Para posicionar la imagen de hover */
+  top: 100%; /* Justo debajo de la imagen principal */
+  left: 50%; /* Centra la imagen de hover horizontalmente */
+  transform: translateX(-50%); /* Corrige el desplazamiento del centrado */
+  background-color: white; /* Fondo blanco para mejor visibilidad */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  z-index: 10; /* Asegura que esté encima de otras imágenes */
+}
+
+.hover-info p {
+  font-size: 15px;
+  color: #000000;
+}
